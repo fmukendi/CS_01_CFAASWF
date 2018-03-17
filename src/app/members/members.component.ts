@@ -16,7 +16,7 @@ export class MembersComponent implements OnInit {
   state: string = '';
 
   constructor(public af: AngularFireAuth,private router: Router) {
-    this.name = af.auth;
+    this.name = af.auth.currentUser.displayName;
     /* this.af.auth.subscribe(auth => {
       if(auth) {
         this.name = auth;

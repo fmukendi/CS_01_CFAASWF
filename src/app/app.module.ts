@@ -1,5 +1,6 @@
 
 // Angular System Module 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -42,17 +43,22 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    EmailComponent,
+    SignupComponent,
+    MembersComponent
   ],
   imports: [
     // Angular Modules
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     RouterModule,
     // External Modules
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule, AngularFireAuth,
+    AngularFireAuthModule,
     // My Modules
 
     // Routes
